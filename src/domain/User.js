@@ -1,4 +1,5 @@
 export default class User {
+  
   constructor(name, email, birthDate, role, active = true) {
     this.name = name
     this.email = email
@@ -12,9 +13,3 @@ export default class User {
   }
 
 }
-
-const newUser = new User('Axel', "axel@gmail.com", '1951-01-01')
-
-console.log(newUser)
-console.log(newUser.showInfos())
-console.log(User.prototype.isPrototypeOf(newUser))
