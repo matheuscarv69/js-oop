@@ -15,7 +15,18 @@ export default class User {
   }
 
   showInfos() {
-    return `${this.#name}, ${this.#email}`
+    return `${this.#name}, are ${this.#calculateAge()} years old, and your email is ${this.#email}`
   }
+
+  // This is a private method, they only called in this class
+  #calculateAge() {
+
+    const yearBirthDate = new Date(this.#birthDate).getFullYear();
+    const currentYear = new Date().getFullYear()
+
+    return currentYear - yearBirthDate
+
+  }
+
 
 }
