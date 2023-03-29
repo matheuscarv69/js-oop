@@ -1,7 +1,9 @@
 export default class User {
-  
+  // Implementing encapsulation in name property
+  #name
+
   constructor(name, email, birthDate, role, active = true) {
-    this.name = name
+    this.#name = name
     this.email = email
     this.birthDate = birthDate
     this.role = role || 'student'
@@ -9,7 +11,7 @@ export default class User {
   }
 
   showInfos() {
-    return `${this.name}, ${this.email}`
+    return `${this.#name}, ${this.email}`
   }
 
 }

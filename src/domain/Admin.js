@@ -1,6 +1,6 @@
 import User from './User.js'
 
-class Admin extends User {
+export default class Admin extends User {
 
   constructor(name, email, birthDate, role = 'admin', active = true) {
     super(name, email, birthDate, role, active)
@@ -11,9 +11,3 @@ class Admin extends User {
   }
 
 }
-
-const newAdmin = new Admin('Rodrigo', 'rodrigo@gmail.com', '2021-01-01')
-
-console.log(newAdmin.createCourse('Js', 20))
-
-
