@@ -14,6 +14,26 @@ export default class User {
     this.#active = active
   }
 
+  get name() {
+    return this.#name
+  }
+
+  get email() {
+    return this.#email
+  }
+
+  get birthDate() {
+    return this.#birthDate
+  }
+
+  get role() {
+    return this.#role
+  }
+
+  get active() {
+    return this.#active
+  }
+
   showInfos() {
     return `${this.#name}, are ${this.#calculateAge()} years old, and your email is ${this.#email}`
   }
